@@ -6,10 +6,23 @@
     </a>
 
     <ul class="nav col-md-4 justify-content-end">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+      <li class="nav-item">
+        <%= link_to root_path, class: "nav-link stretched-link #{'active fw-bold' if current_page?(root_path)}" do %>
+          <i class="bi bi-house-fill"></i>
+          Home
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to privacy_path, class: "nav-link #{'active fw-bold' if current_page?(privacy_path)}" do %>
+          <i class="bi bi-file-fill"></i>
+          Privacy
+        <% end %>
+      </li>
+      <li class="nav-item">
+         <%= link_to terms_path, class: "nav-link #{'active fw-bold' if current_page?(terms_path)}" do %>
+         <i class="bi bi-chevron-contract"></i>
+          Terms
+        <% end %>
+      </li>
     </ul>
 </footer>
