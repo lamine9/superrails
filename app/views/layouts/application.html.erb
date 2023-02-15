@@ -8,14 +8,39 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+    <style>
+        html, body {
+          height: 100%;
+        }
+        
+        #wrap {
+          min-height: 69%;
+        }
+        
+        #main {
+          overflow:auto;
+          padding-bottom:150px; /* this needs to be bigger than footer height*/
+        }
+        
+        .footer {
+          position: relative;
+          margin-bottom: -150px; /* negative value of footer height */
+          height: 150px;
+          clear:both;
+          padding-top:20px;
+        } 
+    </style>
   </head>
 
-  <body>
+  <body class="bg-infos">
     <%= render 'layouts/header' %>
-      <div class="container">
-      <%= render 'layouts/messages' %>
+    <div id="wrap">
+      <div id="main" class="container clear-top">
+        <%= render 'layouts/messages' %>
         <%= yield %>
       </div>
+    </div>
     <%= render 'layouts/footer' %>
   </body>
 </html>

@@ -1,22 +1,18 @@
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top fixed-bottom container-fluid">
-    <p class="col-md-4 mb-0 text-muted">© 2021 Company, Inc</p>
 
-    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-      <i class="bi bi-bootstrap-fill"></i>
-    </a>
-
-    <ul class="nav col-md-4 justify-content-end">
-        <%= link_to root_path, class: "nav-link stretched-link #{'active fw-bold' if current_page?(root_path)}" do %>
+  <footer class="py-3 my-4 footer bg-secondary">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <%= link_to root_path, class: "nav-link text-dark #{'active fw-bold' if current_page?(root_path)}" do %>
           <i class="bi bi-house-fill"></i>
           Home
         <% end %>
-        <%= link_to privacy_path, class: "nav-link #{'active fw-bold' if current_page?(privacy_path)}" do %>
+        <%= link_to privacy_path, class: "nav-link text-dark #{'active fw-bold' if current_page?(privacy_path)}" do %>
           <i class="bi bi-file-fill"></i>
           Privacy
         <% end %>
-        <%= link_to terms_path, class: "nav-link #{'active fw-bold' if current_page?(terms_path)}" do %>
+        <%= link_to terms_path, class: "nav-link text-dark #{'active fw-bold' if current_page?(terms_path)}" do %>
          <i class="bi bi-chevron-contract"></i>
           Terms
         <% end %>
     </ul>
-</footer>
+    <p class="text-center">© 2021 Company, Inc</p>
+  </footer>
